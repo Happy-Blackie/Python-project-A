@@ -1,0 +1,20 @@
+{% extends 'base_payrecords.html' %}
+
+{% block content %}
+    <div class="container record-container">
+        {% for record in all %}
+        <p> 
+                <strong>
+                    <hr> Name: {{record.Fname}}  <br/>
+                </strong>
+        
+             Phone Number: {{record.Phone_Number}}  <br/>
+             Date: {{record.Date}} <br/>
+            Amount Paid: {{record.Amount_Paid}} <br/>
+            <hr>
+        </p>
+    {% endfor %}
+    </div>
+    
+
+{% endblock %}

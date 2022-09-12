@@ -1,0 +1,31 @@
+{% extends 'base_payments.html' %}
+
+{% block content %}
+
+    <div class="container payment-form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for message in messages %}
+                <h5 style="color: red;">{{message}}</h5>
+            {% endfor %}
+            <p>Full name <span style="color:green">indicated on ID Card :</span>  </p>
+            <input type="text" name="fname">
+
+            <p>Phone Number </p>
+            <input type="number" name="pnumber">
+
+            <p>Date:</p>
+            <input type="text" name="dte">
+
+            <p>Amount: </p>
+            <input type="number" name="amnt"> 
+
+            <div class="pay-btn">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Pay</button>
+            </div>
+            
+        
+        </form>
+    </div>
+    
+{% endblock %}

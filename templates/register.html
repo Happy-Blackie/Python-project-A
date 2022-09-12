@@ -1,0 +1,27 @@
+{% extends 'base_register.html'%}
+
+
+{% block content %}
+    <div class="container register-form">
+        <form method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+            <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </p>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-success"> Sign Up</button> 
+            
+        </form>
+    </div>
+    <div class=" container register-question">
+        <p>Having an Account? <a href="login" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> Log In</a></p>
+    </div>
+  
+{% endblock %}

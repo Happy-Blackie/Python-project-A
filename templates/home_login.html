@@ -1,0 +1,36 @@
+{% extends 'home_page.html' %}
+  
+{% block title %}Login{% endblock %}
+  
+{% block content %}
+    <div class="container welcome-container">
+        
+      {% if user.is_authenticated %}
+          <h2>Welcome To AfriJoint Carwash</h2>
+          <h3>Hi {{ user.username }}!</h3>
+          <a href="/signout" class="btn btn-danger">Logout</a>
+
+        {% else %}
+        <h3>You Cant see our  content because you  Did not reach here correctly!!</h3>
+        <h4>Login or Sign Up Below </h4>
+          <a href="login" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Login</a> 
+          <a href="/" class="btn btn-success">Signup</a>
+        {% endif %}
+
+    </div>
+    <!--About us contents-->
+                
+    <div class=" container about-col">
+      <h1>Africa Most Trusted Carwash.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur 
+          eum doloribus dolorem, esse velit odio voluptatum, sed nesciunt 
+          est tenetur explicabo praesentium expedita, excepturi maiores 
+          nemo recusandae temporibus asperiores autem.
+      </p>
+    </div>
+        
+
+    
+    {{year}} <br> {{month}}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base_register.html' %}
+  
+{% block title %}Login{% endblock %}
+  
+{% block content %}
+   <div class="container home-container">
+        <h2>Welcome! Registration successful</h2>
+        {% if user.is_authenticated %}
+        Hi {{ user.username }}! Logout to Login to main page
+        <a href="/signout" class="btn btn-danger">Logout</a>
+        {% else %}
+        <a href="/signin" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>Login</a> 
+        <a href="/signup" class="btn btn-success">Signup</a>
+        {% endif %}
+   </div>
+{% endblock %}

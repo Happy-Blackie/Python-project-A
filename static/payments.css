@@ -1,0 +1,54 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    height: 100vh;
+}
+
+.navbar-style
+{
+    box-shadow: 0 5px 10px #efefef;
+}
+
+.logo
+{
+    height: 48px;
+    padding: 2px 10px;
+}
+
+/*for the menu icon to appear*/
+.icon-bar
+{
+    background: darkorange;
+}
+
+/* h1 tittle afrijoint*/
+.afri-container
+{
+    text-align: center;
+}
+
+.payment-container
+{
+    text-align: center;
+}
+
+/*pay-btn*/
+.pay-btn
+{
+    padding-top: 2em;
+}
+
+.payment-form
+{
+    text-align: center;
+    padding-top: 1em;
+}
+.payment-form p
+{
+    padding-top: 1em;
+}
